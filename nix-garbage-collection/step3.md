@@ -16,7 +16,15 @@ lets take a look at tree dependices dependices.
 
 `nix-store -qR $(nix-build '<nixpkgs>' -A tree)`{{execute}}
 
-we can now see tree dependices
+we can now see tree's dependices
+
+nix-build creates a link to the resultant build called result
+
+
+`ls -lha result`{{execute}}
+`nix-store -qR $(readlink result)`{{execute}}
+ 
+will get you the same dependices, as it point to the same place.
 
 
 `cd /nix/var/nix/gcroots`{{execute}}
@@ -29,6 +37,8 @@ we can now see tree dependices
 
 this now shows all the depencices into the nix store of of your current user enviroment (profile)
 
+
+
 lets collect garbage from the nix store
 
 `nix-collect-garbage`{{execute}}
@@ -36,14 +46,22 @@ lets collect garbage from the nix store
 lots of things get delete from the nix store, including tree , which wasn't part of enviroment.
 
 
-lets install it again...
+
+lets get back to our home install it again...
+
+`cd $HOME`{{execute}}
+
+when run a nix-build, a handy result directory is created, which links into the nix store.
+If we don't remove this then ,the garbage collector won't clean it up
+
 `nix-build '<nixpkgs>' -A tree`{{execute}}
+`rm result`{{execute}}
 
 and collect garbage again...
 
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
-as expect tree (and it's dependices are deleted)
+as expected tree (and it's dependices are garbage collected)
 
 opposed to
 
