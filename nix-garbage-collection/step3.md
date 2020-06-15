@@ -10,7 +10,7 @@ if we use nix build directly, the package will be built but not installed (symli
 
 its not been symlinked into our enviroment.
 
-lets take a look at tree dependices dependices.
+lets take a look at tree dependices.
 
 `nix-build '<nixpkgs>' -A tree`{{execute}}
 
