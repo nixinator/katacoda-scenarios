@@ -12,8 +12,6 @@ its not been symlinked into our enviroment.
 
 lets take a look at tree dependices.
 
-`nix-build '<nixpkgs>' -A tree`{{execute}}
-
 `nix-store -qR $(nix-build '<nixpkgs>' -A tree)`{{execute}}
 
 we can now see tree's dependices
