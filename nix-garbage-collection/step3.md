@@ -55,6 +55,7 @@ when run a nix-build, a handy result directory is created, which links into the 
 If we don't remove this then ,the garbage collector won't clean it up
 
 `nix-build '<nixpkgs>' -A tree`{{execute}}
+
 `rm result`{{execute}}
 
 and collect garbage again...
@@ -69,5 +70,4 @@ opposed to
 
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
-as tree is now installed into of profile, the nix store knows it's in use in our profile so is not thrown in the garbage.
-
+tree is not garbage collected as there is link created in the GCROOT 
