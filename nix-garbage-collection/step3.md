@@ -85,3 +85,4 @@ opposed to
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
 tree is not garbage collected as there is link created in the GCROOT 
+however the derivation files (.drv) are collected.
