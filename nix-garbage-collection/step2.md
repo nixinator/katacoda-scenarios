@@ -24,6 +24,6 @@ as we can see, this is a symlink into the /nix/store
 
 `nix-store --query --requisites $(readlink $(which rg))`{{execute}}
 
-should i be worried... no!......   :-)
+now3 we can see it's dependices
 
 

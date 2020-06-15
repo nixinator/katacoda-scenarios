@@ -1,12 +1,22 @@
-Searching for packages
+More on building
 
 ## Task
 
-let search for a package something....
+if we use nix build directly, the package will be built but not installed (symlinked) to the users enviroment
 
-`nix search cowsay`{{execute}}
+`nix-build '<nixpkgs>' -A tree`{{execute}}
 
-we have to a little 'hack' to get "nix search" to work
+`ls -lha $HOME/.nix-profile/bin/tree`{{execute}}
+
+its not been symlinked into our enviroment.
+
+lets take a look at tree dependices dependices.
+
+`nix-build '<nixpkgs>' -A tree`{{execute}}
+
+`nix-store -qR $(nix-build '<nixpkgs>' -A tree)`{{execute}}
+
+
 https://github.com/NixOS/nix/issues/1865
 
 there seems to be more to this bug?
