@@ -30,16 +30,21 @@ GCROOTS
 
 `cd profiles/per-user/nixuser`{{execute}}
 
-`readlink profile-1-link`
+`readlink profile-2-link`{{execute}}
 
 `nix-store -qR $(readlink profile-2-link)`{{execute}}
 
 this now shows all the depencices into the nix store of of your current user enviroment (profile)
 
 
-`nix-store -qR $(readlink profile-1-link) | grep ripgrep`{{execute}}
+`nix-store -qR $(readlink profile-2-link) | grep ripgrep`{{execute}}
 
 we can clearly see the ripgrep is part of the enviroment (this wont be garbaged collected).d
+
+`nix-store -qR $(readlink profile-2-link) | grep tree`{{execute}}
+
+however tree , which built with nix-build is not
+
 
 lets go back home
 
@@ -52,7 +57,7 @@ lets collect garbage from the nix store
 
 nolonger used files get removed from the nix store,  
 
-however tree was not removed? it's not in GC root, so why is it not collectedd
+why wasn't tree was collected?? it's not in our GC root?
 
 when run a nix-build, a handy result directory is created, which links into the nix store.
 If we don't remove this then ,the garbage collector won't clean it up.
@@ -75,4 +80,4 @@ opposed to
 
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
-tree is not garbage collected as there is link created in a new profile of the GCROOT 
+tree is not garbage collected as there is link created in the GCROOT 
