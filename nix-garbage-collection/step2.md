@@ -12,7 +12,7 @@ lets install ripgrep....
 
 we now have ripgrep package installed into our enviroment
 
-`ls -lha $(which rg)'{{execute}}
+`ls -lha $(which rg)`{{execute}}
 
 `which rg`{{execute}}
 
