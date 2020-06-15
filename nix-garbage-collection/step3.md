@@ -22,8 +22,9 @@ nix-build creates a link to the resultant build called result
 `ls -lha result`{{execute}}
 `nix-store -qR $(readlink result)`{{execute}}
  
-will get you the same dependices, as it point to the same place.
+will get you the same dependices, as it points to the same place.
 
+GCROOTS
 
 `cd /nix/var/nix/gcroots`{{execute}}
 
@@ -31,28 +32,34 @@ will get you the same dependices, as it point to the same place.
 
 `readlink profile-1-link`
 
-`nix-store -qR $(readlink profile-1-link)`{{execute}}
+`nix-store -qR $(readlink profile-2-link)`{{execute}}
 
 this now shows all the depencices into the nix store of of your current user enviroment (profile)
 
 
+`nix-store -qR $(readlink profile-1-link) | grep ripgrep`{{execute}}
+
+we can clearly see the ripgrep is part of the enviroment (this wont be garbaged collected).d
+
+lets go back home
+
+
+`cd $HOME`{{execute}}
 
 lets collect garbage from the nix store
 
 `nix-collect-garbage`{{execute}}
 
-lots of things get delete from the nix store, including tree , which wasn't part of enviroment.
+nolonger used files get removed from the nix store,  
 
-
-
-lets get back to our home install it again...
-
-`cd $HOME`{{execute}}
+however tree was not removed? it's not in GC root, so why is it not collectedd
 
 when run a nix-build, a handy result directory is created, which links into the nix store.
-If we don't remove this then ,the garbage collector won't clean it up
+If we don't remove this then ,the garbage collector won't clean it up.
 
 `nix-build '<nixpkgs>' -A tree`{{execute}}
+
+lets remove the handy result link that nix-build creates
 
 `rm result`{{execute}}
 
@@ -68,4 +75,4 @@ opposed to
 
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
-tree is not garbage collected as there is link created in the GCROOT 
+tree is not garbage collected as there is link created in a new profile of the GCROOT 
