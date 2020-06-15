@@ -21,8 +21,14 @@ we can now see tree dependices
 
 `cd /nix/var/nix/gcroots`{{execute}}
 
-`cd profiles/per-user/-nixuser`{{execute}}
+`cd profiles/per-user/nixuser`{{execute}}
 
 `readlink profile-1-link`
 
 `nix-store -qR $(readlink profile-1-link)`{{execute}}
+
+this now shows all the depencices into the nix store of of your current user enviroment (profile)
+
+lets collect garbage from the nix store
+
+`nix-collect-garbage`
