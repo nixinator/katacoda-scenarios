@@ -31,4 +31,4 @@ this now shows all the depencices into the nix store of of your current user env
 
 lets collect garbage from the nix store
 
-`nix-collect-garbage`
+`nix-collect-garbage`{{execute}}
