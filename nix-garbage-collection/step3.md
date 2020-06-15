@@ -46,7 +46,7 @@ we can clearly see the ripgrep is part of the enviroment (this wont be garbaged 
 however tree , which built with nix-build is not
 
 
-lets go back home
+lets go back home and take out the garbage
 
 
 `cd $HOME`{{execute}}
@@ -64,11 +64,15 @@ If we don't remove this then ,the garbage collector won't clean it up.
 
 `nix-build '<nixpkgs>' -A tree`{{execute}}
 
+`ls -lha result`{{execute}}
+
+`nix-store -qR $(readlink result)`{{execute}}
+
 lets remove the handy result link that nix-build creates
 
 `rm result`{{execute}}
 
-and collect garbage again...
+and collect the garbage again...
 
 `nix-collect-garbage 2>&1 >/dev/null | grep tree`{{execute}}
 
