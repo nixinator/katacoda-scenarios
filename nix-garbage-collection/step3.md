@@ -21,3 +21,8 @@ we can now see tree dependices
 
 `cd /nix/var/nix/gcroots`{{execute}}
 
+`cd profiles/per-user-nixuser`{{execute}}
+
+`readlink profile-1-link`
+
+`nix-store -qR $(readlink profile-1-link)`{{execute}}
