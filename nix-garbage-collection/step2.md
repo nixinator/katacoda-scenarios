@@ -22,7 +22,7 @@ this is not on a normal path, it's added your nix profile
 
 as we can see, this is a symlink into the /nix/store
 
-`nix-store --query --requisites $(readlinki $(which rg))`{{execute}}
+`nix-store --query --requisites $(readlink $(which rg))`{{execute}}
 
 should i be worried... no!......   :-)
 
