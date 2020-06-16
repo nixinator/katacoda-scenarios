@@ -1,6 +1,6 @@
 {
-  "title": "Installing the Nix package manager",
-  "description": "Installing the nix package manager",
+  "title": "Installing the Nix package manager multiuser mode",
+  "description": "Installing the nix package manager multiuser mode",
   "difficulty": "beginner",
   "time": "8 seconds ",
   "details": {
