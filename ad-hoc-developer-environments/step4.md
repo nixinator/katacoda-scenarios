@@ -7,7 +7,7 @@ Once you have the attribute name for packages, you can start a shell:
 
 `nix-shell -p gitMinimal vim nano joe`{{execute}}
 
-we now in a new shell
+we are now in a new shell
 
 `git --version`{{execute}}
 

@@ -20,6 +20,14 @@
     {
       "title": "Step 4 - Ad hoc shell environments",
       "text": "step4.md"
+    },
+    {
+      "title": "Step 5 - Beyond tooling: Python libraries",
+      "text": "step5.md"
+    },
+    {
+      "title": "Step 6 - Towards reproducibility ",
+      "text": "step6.md"
     }
     ],
     "intro": {
