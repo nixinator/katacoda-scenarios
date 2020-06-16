@@ -24,5 +24,6 @@ we need to logout of nixuser, and log back in
 `su - nixuser`{{execute}}
 
 
+`nix-env --version`{{execute}}
 
 
