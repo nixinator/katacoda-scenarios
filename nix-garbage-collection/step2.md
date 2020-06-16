@@ -24,6 +24,12 @@ as we can see, this is a symlink into the /nix/store
 
 `nix-store --query --requisites $(readlink $(which rg))`{{execute}}
 
-now3 we can see it's dependices
+now we can see it's RUNTIME dependices
+
+nix makes a distincation between runtime and buildtime dependices.
+
+to list ripgrep's bulld time dependices with
+
+`nix-store -qR $(nix-store -qd $(which rg))`{{execute}}
 
 
