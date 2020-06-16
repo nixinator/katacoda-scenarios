@@ -28,6 +28,8 @@ we need to logout of nixuser, and log back in
 
 we can check that the nix daemon is running and the nix daemon socket is available
 
-The socket allows userspace nix tools to commicate with nix store
+The socket allows userspace nix tools to commicate with nix daemonn
 
 `systemctl status nix-daemon.service nix-daemon.socket`{{execute}}
+
+`sudo netstat -a -p --unix | grep daemon-sock`
