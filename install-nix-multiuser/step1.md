@@ -32,4 +32,4 @@ The socket allows userspace nix tools to commicate with nix daemonn
 
 `systemctl status nix-daemon.service nix-daemon.socket`{{execute}}
 
-`sudo netstat -a -p --unix | grep daemon-sock`
+`sudo netstat -a -p --unix | grep daemon-sock`{{execute}}
