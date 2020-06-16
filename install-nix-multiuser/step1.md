@@ -26,4 +26,8 @@ we need to logout of nixuser, and log back in
 
 `nix-env --version`{{execute}}
 
+we can check that the nix daemon is running and the nix daemon socket is available
 
+The socket allows userspace nix tools to commicate with nix store
+
+`systemctl status nix-daemon.service nix-daemon.socket`{{execute}}
