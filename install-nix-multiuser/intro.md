@@ -1,3 +1,3 @@
-Installing the Nix package manager (single user mode).
+Installing the Nix package manager (multi user mode).
 
 
