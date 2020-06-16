@@ -17,9 +17,30 @@ The following is a fully reproducible example and something that different colle
 
 `git --version`{{execute}}
 
+
+`exit`{{execute}}
+
 There are two things going on here:
 
 1. --pure flag makes sure that the bash environment from your system is not inherited. That means only the git that Nix installed is available inside the shell. This is useful for one-liners and scripts that run for example within a CI environment. While developing, however, we’d like to have our editor around and a bunch of other things. Therefore we might skip the flag for development environments but use it in build ones.
 
 2. The -I flag pins the nixpkgs revision to an exact git revision, leaving no doubt which exact version of Nix packages will be used.
+
+To understand the --pure flag , lets
+
+`nix-env -i cowsay`{{execute}}
+
+`cowsay I'm available in this shell`{{execute}}
+
+`nix-shell -p git -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/82b5f87fcc710a99c47c5ffe441589807a8202af.tar.gz`{{execute}}
+
+`cowsay I'm still available in the nix-shell`{{execute}}
+
+`exit`{{execute}}
+
+`nix-shell --pure -p git -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/82b5f87fcc710a99c47c5ffe441589807a8202af.tar.gz`{{execute}}
+
+`cowsay has not been inherited by nix-shell`{{execute}}
+
+
 

@@ -14,4 +14,6 @@ We create an ad hoc environment with $PYTHONPATH set and python available, along
 
 The -p argument can handle more than attribute names. You can use a full Nix expression, but we’ll cover that in later tutorials.
 
+`exit`{{execute}}
+
 

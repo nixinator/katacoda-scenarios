@@ -16,5 +16,7 @@ we are now in a new shell
 
 Note that even if you had git installed before, once in the shell only the exact version installed by Nix is used.
 
-Press CTRL-D to exit the shell and those packages won’t be available anymore.
+`exit`{{execute}}
+
+we now return to a orginal undistrurb shell
 
