@@ -9,9 +9,9 @@ To start, anything that’s in the official package list can become part of the 
 You can search the package list using:
 
 
-`nix-env -qaP git`{{execute}}
+`nix-env -qaP --description git`{{execute}}
 
-The first column is the attribute name and the second is the package name and its version.
+The first column is the attribute name and the second is the package name and its version. The third column is human readable description.
 
 Once you are comfortable doing this, you can add other things too. For example, packages of your own or custom shell aliases.
 
