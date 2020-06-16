@@ -30,17 +30,17 @@ To understand the --pure flag , lets
 
 `nix-env -i cowsay`{{execute}}
 
-`cowsay I'm available in this shell`{{execute}}
+`cowsay "available in this shell"`{{execute}}
 
 `nix-shell -p git -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/82b5f87fcc710a99c47c5ffe441589807a8202af.tar.gz`{{execute}}
 
-`cowsay I'm still available in the nix-shell`{{execute}}
+`cowsay "still available in the nix-shell"`{{execute}}
 
 `exit`{{execute}}
 
 `nix-shell --pure -p git -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/82b5f87fcc710a99c47c5ffe441589807a8202af.tar.gz`{{execute}}
 
-`cowsay has not been inherited by nix-shell`{{execute}}
+`cowsay "has not been inherited by nix-shell"`{{execute}}
 
-
+cowsay is not available, as the shell is pure
 
