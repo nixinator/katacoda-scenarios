@@ -15,8 +15,9 @@ A hello world example:
 
 we are now in a complely new shell
 
-`exit`{{execute}}
+`hello`{{execute}}
 
+`exit`{{execute}}
 
 `hello`{{execute}}
 

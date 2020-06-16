@@ -28,7 +28,7 @@ we need to logout of nixuser, and log back in
 
 we can check that the nix daemon is running and the nix daemon socket is available
 
-The socket allows userspace nix tools to commicate with nix daemonn
+The socket allows userspace nix tools to commicate with nix daemon
 
 `systemctl status nix-daemon.service nix-daemon.socket`{{execute}}
 
