@@ -15,10 +15,13 @@ The creation of the nixdaemon and service.
 
 `time sh <(curl -L https://nixos.org/nix/install) --daemon`{{execute}}
 
-Installation finished!  To ensure that the necessary environment
-variables are set, either log in again, or type
+Installation finished!
 
-`. /home/nixuser/.nix-profile/etc/profile.d/nix.sh`{{execute}}
+we need to logout of nixuser, and log back in
+
+`exit`{{execute}}
+
+`su - nixuser`{{execute}}
 
 
 
