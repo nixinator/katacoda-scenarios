@@ -13,7 +13,7 @@ create a nornal user who can sudo
 Install the nix package manager into your enviroment, in multiuser 
 The creation of the nixdaemon and service.
 
-`time sh <(curl -L https://nixos.org/nix/install) --daemon | sh`{{execute}}
+`time sh <(curl -L https://nixos.org/nix/install) --daemon`{{execute}}
 
 Installation finished!  To ensure that the necessary environment
 variables are set, either log in again, or type
