@@ -6,16 +6,9 @@ Cymande - Dove
 
 ## Task
 
-create a nornal user who can sudo
+The Nix package manager should be automatically installed
 
-`useradd -m nixuser -G sudo;su - nixuser `{{execute}}
-
-Install the nix package manager into your enviroment
-
-`time sh <(curl -L https://nixos.org/nix/install) --no-daemon`{{execute}}
-
-Installation finished!  To ensure that the necessary environment
-variables are set, either log in again, or type
+lets complete the installation by updating enviroment variables
 
 `. /home/nixuser/.nix-profile/etc/profile.d/nix.sh`{{execute}}
 
