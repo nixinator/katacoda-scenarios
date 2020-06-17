@@ -33,7 +33,7 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uisettings": "javascript",
-    "uieditorpath": "/home/nixuser"
+    "uieditorpath": "/home/nixuser",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\njavris, shall we install single user version of the nix package manager ?`\u001b[m\r\n"
   },
   "backend": {
