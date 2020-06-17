@@ -18,7 +18,7 @@ lets create a test.nix file with the following nix code
 
 <pre class="file" data-filename="test.nix" data-target="prepend"># This imports the nix package collection,
 # so we can access the `pkgs` and `stdenv` variables
-with import <nixpkgs> {};
+with import &ltnixpkgs&gt {};
 
 # Make a new "derivation" that represents our shell
 stdenv.mkDerivation {
