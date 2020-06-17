@@ -32,3 +32,21 @@ stdenv.mkDerivation {
   ];
 }
 </pre>
+
+now we can nix-shell test.nix 
+
+`nix-shell /home/nixuser2/test.nix`{{execute}}
+
+`echo "welcome to the nix environment" | cowsay`{{execute}}
+
+lets exit this nix-shell back to our original shell
+
+`exit`{{execute}}
+
+`cowsay``{{execute}}
+
+cowsay only existed in our nix-shell. 
+
+So we've made our first nix-shell. This allows us to create self-contained groups of packages (useful in and of itself). But we've also run our own nix code, the test.nix file, which will come in handy in the future.
+
+
