@@ -1,7 +1,15 @@
-This is your first step.
 
-for hearing input i'd recommend https://www.youtube.com/watch?v=YcL8SvyKtE4
-Cymande - Dove
+Nix-shell lets you open a shell in a new environment.
+
+In Nix; an environment is a collection of derevations (aka packages) that are put into your PATH. This is really useful in many circumstances:
+
+Collaboration; you can just send the .nix file to a collaborator and they will have the same things installed
+
+
+Cleanliness; stuff inside a nix-shell isn't installed in your main environment; so you don't have to worry about uninstalling stuff or causing conflicts with other packages you love
+
+
+Developing things; it is easy to build your own packages and test them inside a shell
 
 
 ## Task
