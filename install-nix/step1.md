@@ -12,7 +12,6 @@ create a nornal user who can sudo
 
 Install the nix package manager into your enviroment
 
-#`time curl https://nixos.org/nix/install | sh`{{execute}}
 `time sh <(curl -L https://nixos.org/nix/install) --no-daemon`{{execute}}
 
 Installation finished!  To ensure that the necessary environment
