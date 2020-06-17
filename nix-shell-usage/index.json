@@ -1,6 +1,6 @@
 {
-  "title": "Installing the Nix package manager",
-  "description": "Installing the nix package manager",
+  "title": "Using the Nix Shell",
+  "description": "The Nix Shell",
   "difficulty": "beginner",
   "time": "8 seconds ",
   "details": {
