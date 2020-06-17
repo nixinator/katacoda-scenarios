@@ -1,4 +1,4 @@
-Exploring GCROOTSg
+Exploring GCROOTS
 
 ## Task
 
@@ -16,7 +16,7 @@ This how nix knows what  to garbage collect.
 
 `nix-store -qR $(readlink profile-2-link)`{{execute}}
 
-this listsy dependicy of your current user enviroment (profile)
+this lists everything your current user profilee depends on
 
 
 `nix-store -qR $(readlink profile-2-link) | grep ripgrep`{{execute}}
