@@ -14,22 +14,19 @@ Developing things; it is easy to build your own packages and test them inside a 
 
 ## Task
 
-let install something....
+<pre class="file" data-filename="test.nix" data-target="prepend"># This imports the nix package collection,
+# so we can access the `pkgs` and `stdenv` variables
+with import <nixpkgs> {};
 
-`nix-env -i cowsay`{{execute}}
+# Make a new "derivation" that represents our shell
+stdenv.mkDerivation {
+  name = "my-environment";
 
-Okay? that looks weird.... eh? what just happened?
-
-`cowsay https://twich.tv/rolandvdrums`{{execute}}
-
-where did that come from?
-
-`type cowsay`{{execute}}
-
-why does it live there?
-
-`ls -lha /home/nixuser/.nix-profile/bin/cowsay`{{execute}}
-
-should i be worried... no!......   :-)
-
-
+  # The packages in the `buildInputs` list will be added to the PATH in our shell
+  buildInputs = [
+    # cowsay is an arbitary package
+    # see https://nixos.org/nixos/packages.html to search for more
+    pkgs.cowsay
+  ];
+}
+</pre>

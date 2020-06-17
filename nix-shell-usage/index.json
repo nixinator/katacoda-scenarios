@@ -28,7 +28,7 @@
     }
   },
   "files": [
-        "app.js", "index.js"
+        "test.nix", "index.js"
   ],
   "environment": {
     "uilayout": "editor-terminal",
