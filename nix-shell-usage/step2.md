@@ -14,6 +14,8 @@ Developing things; it is easy to build your own packages and test them inside a 
 
 ## Task
 
+lets create a test.nix file with the following nix code
+
 <pre class="file" data-filename="test.nix" data-target="prepend"># This imports the nix package collection,
 # so we can access the `pkgs` and `stdenv` variables
 with import <nixpkgs> {};
