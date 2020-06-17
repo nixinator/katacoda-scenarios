@@ -6,8 +6,7 @@ create a nornal user who can sudo
 
 `useradd -m nixuser -G sudo;su - nixuser `{{execute}}
 
-Install the nix package manager into your enviroment, in multiuser 
-The creation of the nixdaemon and service.
+Install the multiuser version of the nix package manager into your environment
 
 `time sh <(curl -L https://nixos.org/nix/install) --daemon`{{execute}}
 
