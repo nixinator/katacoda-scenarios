@@ -28,7 +28,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-editor",
+    "uilayout": "editor-terminal",
+    "uisettings": "javascript",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\njavris, shall we install single user version of the nix package manager ?`\u001b[m\r\n"
   },
   "backend": {
