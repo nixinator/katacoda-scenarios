@@ -16,6 +16,8 @@ Developing things; it is easy to build your own packages and test them inside a 
 
 lets create a test.nix file with the following nix code
 
+before copying the code to the editor, please remove the // comments from the editor (slight bug)
+
 <pre class="file" data-filename="test.nix" data-target="prepend"># This imports the nix package collection,
 # so we can access the `pkgs` and `stdenv` variables
 with import &ltnixpkgs&gt {};
