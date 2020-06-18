@@ -45,7 +45,7 @@ lets exit this nix-shell back to our original shell
 
 `exit`{{execute}}
 
-`cowsay``{{execute}}
+`cowsay`{{execute}}
 
 cowsay only existed in our nix-shell. 
 
