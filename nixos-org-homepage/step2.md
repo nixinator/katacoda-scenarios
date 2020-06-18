@@ -10,3 +10,5 @@ lets create a test.nix file with the following nix code
 ``make``{{execute}}
 
 python -m http.server 8000
+
+<pre>https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com</pre>
