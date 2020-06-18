@@ -4,7 +4,7 @@
 
 lets create a test.nix file with the following nix code
 
-`git clone git@github.com:NixOS/nixos-homepage.git`{{execute}}
+`git clone https://github.com/NixOS/nixos-homepage.git`{{execute}}
 `cd nixos-homepage`{{execute}}
 ``nix-shell``{{execute}}
 ``make``{{execute}}
