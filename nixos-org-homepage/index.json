@@ -1,0 +1,42 @@
+{
+  "title": "Building Nixos.org",
+  "description": "Building the nixos.org website",
+  "difficulty": "beginner",
+  "time": "8 seconds ",
+  "details": {
+    "steps": [
+	    {
+      "title": "Step 1 - install nix package manager on ubnutu",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - install cowsay........ blimey!",
+      "text": "step2.md"
+    },
+    {
+      "title": "Step 3 - searching for packages",
+      "text": "step3.md"
+    }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+        "test.nix", "index.js"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uisettings": "javascript",
+    "uieditorpath": "/home/nixuser2",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\njavris, shall we install single user version of the nix package manager ?`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
