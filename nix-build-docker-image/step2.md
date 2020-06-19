@@ -14,9 +14,7 @@ lets create a docker-redis.nix file with the following nix code
 }
 </pre>
 
-please remove the lines 17 and 18 from docker-redis.nix (else the nix interpter will throw an error)
-
-now we can start a new shell with nix-shell test.nix 
+lets nix-build this code (expression)
 
 `nix-build /home/nixuser2/docker-redis.nix`{{execute}}
 
