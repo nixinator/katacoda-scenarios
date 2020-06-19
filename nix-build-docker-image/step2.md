@@ -4,7 +4,7 @@ Lets write a piece of nix code to create a docker image with redis.
 
 lets create a docker-redis.nix file with the following nix code
 
-<pre class="file" data-filename="dockerredis.nix" data-target="replace">
+<pre class="file" data-filename="docker-redis.nix" data-target="replace">
 { pkgs ? import &ltnixpkgs&gt {}         # nixpkgs package set
  }:
  pkgs.dockerTools.buildLayeredImage { # helper to build docker image
