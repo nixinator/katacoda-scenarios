@@ -27,7 +27,7 @@ In redis-minimal.nix we override the default redis build with three changes:
 2.) Build a statically linked binary with musl
 3.) Remove all binaries apart from redis-server
 
-lets create a nix expression that build a new docker image with this version of redis-xminimal
+lets create a nix expression that builds a new docker image with this version of redis-minimal
 
 
 <pre class="file" data-filename="docker-redis-minimal.nix" data-target="replace">
