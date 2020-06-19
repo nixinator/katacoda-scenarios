@@ -2,7 +2,7 @@ Optimise a docker image
 
 ## Task
 
-lets create a docker-redis-minmal.nix file with the following nix code
+lets create a redis-minmal.nix file with the following nix code
 
 <pre class="file" data-filename="redis-minimal.nix" data-target="replace">
 { pkgs ? import &ltnixpkgs&gt {}         # nixpkgs package set
