@@ -16,7 +16,7 @@ Developing things; it is easy to build your own packages and test them inside a 
 
 lets create a test.nix file with the following nix code
 
-<pre class="file" data-filename="test.nix" data-target="prepend"># This imports the nix package collection,
+<pre class="file" data-filename="test.nix" data-target="replace"># This imports the nix package collection,
 # so we can access the `pkgs` and `stdenv` variables
 with import &ltnixpkgs&gt {};
 
@@ -32,8 +32,6 @@ stdenv.mkDerivation {
   ];
 }
 </pre>
-
-please remove the lines 17 and 18 from test.nix (else the nix interpter will throw an error)
 
 now we can start a new shell with nix-shell test.nix 
 
