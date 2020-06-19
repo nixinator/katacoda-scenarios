@@ -11,14 +11,13 @@ lets create a docker-redis.nix file with the following nix code
    tag = "latest";                    # provide a tag
    contents = [ pkgs.redis ];         # packages in docker image
  }
-}
 </pre>
 
 lets nix-build this code (expression)
 
 `nix-build /home/nixuser2/docker-redis.nix`{{execute}}
 
-`docker load -i ./result`{{execute}}
+sudo `docker load -i ./result`{{execute}}
 
-`docker images | grep redis`{{execute}}
+sudo `docker images | grep redis`{{execute}}
 
