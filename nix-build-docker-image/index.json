@@ -28,7 +28,7 @@
     }
   },
   "files": [
-        "docker-redis.nix", "redis-minimal.nix"
+        "dockerredis.nix", "redisminimal.nix"
   ],
   "environment": {
     "uilayout": "editor-terminal",
