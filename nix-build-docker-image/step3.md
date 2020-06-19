@@ -43,7 +43,7 @@ lets create a nix expression that build a new docker image with this version of 
  }
 </pre>
 
-`nix-build /home/nixuser2/docker-redis.nix`{{execute}}
+`nix-build /home/nixuser2/docker-redis-redis.nix`{{execute}}
 
 `sudo docker load -i ./result`{{execute}}
 
