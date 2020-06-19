@@ -31,7 +31,7 @@ lets create a nix expression that build a new docker image with this version of 
 
 
 <pre class="file" data-filename="docker-redis-minimal.nix" data-target="replace">
- { pkgs ? import &ltnixpkgs&ht {}
+ { pkgs ? import &ltnixpkgs&gt {}
  }:
  let
    redisMinimal = import ../nixuser2/redis-minimal.nix { inherit pkgs; };
