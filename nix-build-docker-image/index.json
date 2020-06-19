@@ -1,0 +1,42 @@
+{
+  "title": "Building a docker image with nix",
+  "description": "Building a docker image with nix",
+  "difficulty": "beginner",
+  "time": "8 seconds ",
+  "details": {
+    "steps": [
+	    {
+      "title": "Step 1 - install nix package manager on ubnutu",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - Lets Build a docker image",
+      "text": "step2.md"
+    },
+    {
+      "title": "Step 3 - Lets Build an optomised docker image",
+      "text": "step3.md"
+    }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+        "docker-redis.nix", "index.js"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uisettings": "javascript",
+    "uieditorpath": "/home/nixuser2",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\njavris, shall we install single user version of the nix package manager ?`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
