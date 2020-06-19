@@ -1,6 +1,8 @@
-Environments with Nix Shell - Learning Nix pt 1
+Environments with Nix Shell - Build the nixos-homepage 
 
-Transcribed from
+
+We use nix-shell to setup all the tooling and data needed
+to build the nixos home page.
+
 
 https://github.com/NixOS/nixos-homepage
-

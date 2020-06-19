@@ -16,4 +16,4 @@ lets create a test.nix file with the following nix code
 
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
 
-<pre>https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com</pre>
+
