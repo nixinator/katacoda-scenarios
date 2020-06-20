@@ -1,10 +1,37 @@
-This is your first step.
 
-for hearing input i'd recommend https://www.youtube.com/watch?v=YcL8SvyKtE4
-Cymande - Dove
+How to install from a git local repository
 
 
 ## Task
+
+For expediency just for this article, we'll shallow clone direct from the distribution repo and set an environment variable pointing to it.
+
+`mkdir -p ~/tmpdev && cd ~/tmpdev
+` git clone --depth=1 https://github.com/nixos/nixpkgs
+` export NIXPKGS=~/tmpdev/nixpkgs
+. ls $NIXPKGS
+make some changes ...
+
+example: list all available software from the local repository $NIXPKGS
+
+`nix-env -f $NIXPKGS -qaP '*'`{{execute}}
+example: install software from local repository
+
+`nix-env -f $NIXPKGS -iA python-urlgrabber`{{execute}}
+example: update the system based on your local $NIXPKGS
+
+`nixos-rebuild -I nixpkgs=$NIXPKGS switch`{{execute}}
+example: build an expression and put the output in to `pwd`/results
+
+`nix-build $NIXPKGS -A irssi`{{execute}}
+example: get an environment which is used to build irssi (also see nix-shell)
+
+`nix-build $NIXPKGS --run-env -A irssi`{{execute}}
+example: get a persistent environment which is used to build irssi
+
+`nix-build $NIXPKGS --run-env -A irssi --add-root`{{execute}}
+
+
 
 let install something....
 
