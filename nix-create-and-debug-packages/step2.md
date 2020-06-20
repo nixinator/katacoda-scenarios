@@ -24,19 +24,19 @@ example: list all available software from the local repository $NIXPKGS
 `nix-env -f $NIXPKGS -qaP '*'`{{execute}}
 
 you can also use nix search to get a friendly output
-the -u flah is need to rebuild the cache from you newly downloaded nixpkgs repo
+the -u flag is need to rebuild the cache from your newly downloaded nixpkgs repo
 
 `nix search -u -f $NIXPKGS minecraft`{{execute}}
 
 example: install software from local repository
 
-`nix-env -f $NIXPKGS -iA python-urlgrabber`{{execute}}
+`nix-env -f $NIXPKGS -iA hello`{{execute}}
 
 example: build an expression and put the output into you present working directory
 
 `pwd`{{execute}}
 
-`nix-build $NIXPKGS -A irssi`{{execute}}
+`nix-build $NIXPKGS -A ripgrep`{{execute}}
 
 the results of this build is create in the /nix/store however a hand result symbolic link
 is create for you.
@@ -52,5 +52,5 @@ example: get a persistent environment which is used to build irssi
 
 `nix-build $NIXPKGS --run-env -A irssi --add-root`{{execute}}
 
-
+`nix-shell -p nethack'{{execute}}
 
