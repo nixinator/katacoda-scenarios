@@ -52,5 +52,5 @@ example: get a persistent environment which is used to build irssi
 
 `nix-build $NIXPKGS --run-env -A irssi --add-root`{{execute}}
 
-`nix-shell -p nethack'{{execute}}
+`nix-shell -p nethack`{{execute}}
 
