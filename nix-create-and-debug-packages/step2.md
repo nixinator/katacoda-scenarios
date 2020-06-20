@@ -4,12 +4,16 @@ How to install from a git local repository
 
 ## Task
 
-For expediency just for this article, we'll shallow clone direct from the distribution repo and set an environment variable pointing to it.
+Lets shallow clone direct from the distribution repo and set an environment variable pointing to it.
 
-`mkdir -p ~/tmpdev && cd ~/tmpdev
-` git clone --depth=1 https://github.com/nixos/nixpkgs
-` export NIXPKGS=~/tmpdev/nixpkgs
-. ls $NIXPKGS
+If we do a full clone, it can be quite large download as  the repo gets many commmits a day and 
+also contains many branches.
+
+
+`mkdir -p ~/tmpdev && cd ~/tmpdev`{{execute}}
+`git clone --depth=1 https://github.com/nixos/nixpkgs`{{execute}}
+`export NIXPKGS=~/tmpdev/nixpkgs`{{execute}}
+`ls $NIXPKGS`{{execute}}
 make some changes ...
 
 example: list all available software from the local repository $NIXPKGS
