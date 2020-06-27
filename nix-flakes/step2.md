@@ -9,7 +9,7 @@ The following command fetches the dwarffs Git repository, builds its default pac
 
 The command above isn’t very reproducible: it fetches the most recent version of dwarffs, which could change over time. But it’s easy to ask Nix to build a specific revision:
 
-`nix shell github:edolstra/dwarffs/cd7955af31698c571c30b7a0f78e59fd624d0229`{{execute}}
+`nix shell github:edolstra/dwarffs/d11b181af08bfda367ea5cf7fad103652dc0409f`{{execute}}
 
 ## Flake Inputs
 
